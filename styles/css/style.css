@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+/* line 7, ../compass/sass/style.sass */
+body {
+  font-family: "Open Sans", "Lato", sans-serif;
+  background-color: white;
+}
+
+/* line 11, ../compass/sass/style.sass */
+.contact-div {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+
+/* line 19, ../compass/sass/style.sass */
+.title-text {
+  text-align: center;
+  font-weight: 300;
+  color: #333;
+}
+
+/* line 27, ../compass/sass/style.sass */
+.Myform {
+  width: 100%;
+  border: none !important;
+  border-bottom: 2px solid #52596b !important;
+  border-radius: 0px !important;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* line 36, ../compass/sass/style.sass */
+.label-form {
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 400;
+  color: #52596b;
+}
+
+/* line 41, ../compass/sass/style.sass */
+input, textarea {
+  color: #rgb 82, 89, 107 !important;
+  background-color: white;
+}
+
+/* line 45, ../compass/sass/style.sass */
+textarea:focus, input:focus {
+  outline: none;
+  color: #rgb 82, 89, 107 !important;
+}
+
+/* line 49, ../compass/sass/style.sass */
+*::-webkit-input-placeholder {
+  color: #rgb 82, 89, 107;
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 300;
+}
+
+/* line 54, ../compass/sass/style.sass */
+*:-moz-placeholder {
+  color: #rgb 82, 89, 107;
+  opacity: 1;
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 300;
+}
+
+/* line 60, ../compass/sass/style.sass */
+*::-moz-placeholder {
+  color: #rgb 82, 89, 107;
+  opacity: 1;
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 300;
+}
+
+/* line 66, ../compass/sass/style.sass */
+*:-ms-input-placeholder {
+  color: #rgb 82, 89, 107;
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 300;
+}
+
+/* line 71, ../compass/sass/style.sass */
+.radio-gender, .radio-work {
+  margin-left: -20px !important;
+}
+
+/* line 75, ../compass/sass/style.sass */
+.radio-inline {
+  width: 49% !important;
+  margin-top: 10px !important;
+}
+
+/* line 79, ../compass/sass/style.sass */
+#countries, #provinces {
+  margin-top: 10px !important;
+}
+
+/* line 82, ../compass/sass/style.sass */
+.phone-text {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* line 86, ../compass/sass/style.sass */
+.checkbox-campus {
+  width: 32%;
+}
+
+/* line 89, ../compass/sass/style.sass */
+.text-radio-checkbox {
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 400;
+  color: #52596b;
+}
