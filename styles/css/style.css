@@ -13,16 +13,17 @@ body {
   margin-right: auto;
   margin-top: 70px;
   padding-bottom: 30px;
+  margin-bottom: 100px;
 }
 
-/* line 19, ../compass/sass/style.sass */
+/* line 20, ../compass/sass/style.sass */
 .title-text {
   text-align: center;
   font-weight: 300;
   color: #333;
 }
 
-/* line 27, ../compass/sass/style.sass */
+/* line 28, ../compass/sass/style.sass */
 .Myform {
   width: 100%;
   border: none !important;
@@ -33,33 +34,33 @@ body {
   margin-top: 5px;
 }
 
-/* line 36, ../compass/sass/style.sass */
+/* line 37, ../compass/sass/style.sass */
 .label-form {
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
   color: #52596b;
 }
 
-/* line 41, ../compass/sass/style.sass */
+/* line 42, ../compass/sass/style.sass */
 input, textarea {
   color: #rgb 82, 89, 107 !important;
   background-color: white;
 }
 
-/* line 45, ../compass/sass/style.sass */
+/* line 46, ../compass/sass/style.sass */
 textarea:focus, input:focus {
   outline: none;
   color: #rgb 82, 89, 107 !important;
 }
 
-/* line 49, ../compass/sass/style.sass */
+/* line 50, ../compass/sass/style.sass */
 *::-webkit-input-placeholder {
   color: #rgb 82, 89, 107;
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 300;
 }
 
-/* line 54, ../compass/sass/style.sass */
+/* line 55, ../compass/sass/style.sass */
 *:-moz-placeholder {
   color: #rgb 82, 89, 107;
   opacity: 1;
@@ -67,7 +68,7 @@ textarea:focus, input:focus {
   font-weight: 300;
 }
 
-/* line 60, ../compass/sass/style.sass */
+/* line 61, ../compass/sass/style.sass */
 *::-moz-placeholder {
   color: #rgb 82, 89, 107;
   opacity: 1;
@@ -75,43 +76,72 @@ textarea:focus, input:focus {
   font-weight: 300;
 }
 
-/* line 66, ../compass/sass/style.sass */
+/* line 67, ../compass/sass/style.sass */
 *:-ms-input-placeholder {
   color: #rgb 82, 89, 107;
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 300;
 }
 
-/* line 71, ../compass/sass/style.sass */
+/* line 72, ../compass/sass/style.sass */
 .radio-gender, .radio-work {
   margin-left: -20px !important;
 }
 
-/* line 75, ../compass/sass/style.sass */
+/* line 76, ../compass/sass/style.sass */
 .radio-inline {
-  width: 49% !important;
+  width: 45% !important;
   margin-top: 10px !important;
 }
 
-/* line 79, ../compass/sass/style.sass */
+/* line 80, ../compass/sass/style.sass */
 #countries, #provinces {
   margin-top: 10px !important;
 }
 
-/* line 82, ../compass/sass/style.sass */
+/* line 83, ../compass/sass/style.sass */
 .phone-text {
   margin-top: 5px;
   margin-bottom: 0;
 }
 
-/* line 86, ../compass/sass/style.sass */
+/* line 87, ../compass/sass/style.sass */
 .checkbox-campus {
   width: 32%;
 }
 
-/* line 89, ../compass/sass/style.sass */
+/* line 90, ../compass/sass/style.sass */
 .text-radio-checkbox {
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
   color: #52596b;
+}
+
+/* line 95, ../compass/sass/style.sass */
+.full-width {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+/* line 99, ../compass/sass/style.sass */
+#send-button {
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 400;
+  color: #52596b;
+  border: 2px solid #52596b !important;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+/* line 108, ../compass/sass/style.sass */
+#send-button:hover {
+  color: #590096;
+  border: 2px solid #590096 !important;
+  background-color: white !important;
+}
+
+/* line 113, ../compass/sass/style.sass */
+.animation-form-label {
+  color: white;
 }
