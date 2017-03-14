@@ -14,25 +14,31 @@
 </head>
 
 <body>
+    <header>
+        <div class="header-div">
+            <img src="styles/images/header.jpg" class="img-responsive">
+        </div>
+    </header>
     <div class="contact-div">
         <h2 class="title-text">Apply online</h2>
+        <!--h5 class="h5-text">Ready to take the next step toward achieving your goals? Please foll out the application below and we will contact you about the next steps in your admission process.</h5-->
         <form class="form-group-md">
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <labelv class="label-form animation-form-label" for="fname">First name:</label>
+                    <labelv class="label-form animation-form-label" for="fname"><kbd>*</kbd> First name:</label>
                         <input type="text" name="firstname" id="fname" class="Myform" placeholder="First name" autocomplete="off" onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
                 </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <labelv class="label-form animation-form-label" for="lname">Last name:</label>
+                    <labelv class="label-form animation-form-label" for="lname"><kbd>*</kbd> Last name:</label>
                         <input type="text" name="lastname" id="lname" class="Myform" placeholder="Last name" autocomplete="off" onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
                 </div>
             </div>
 
 
             <div class="form-group col-sm-12 col-xs-12 col-sm-12 col-lg-12  full-width">
-                <labelv class="label-form" for="genradio">Gender:</label><br>
+                <labelv class="label-form" for="genradio"><kbd>*</kbd> Gender:</label><br>
                     <label class="radio-inline">
                         <input type="radio" class="radio-gender" name="genradio">Male
                     </label>
@@ -44,7 +50,7 @@
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <labelv class="label-form" for="countries">Country:</label>
+                    <labelv class="label-form" for="countries"><kbd>*</kbd> Country:</label>
                         <select class="form-control" id="countries">
 	<option value="AF">Afghanistan</option>
 	<option value="AX">Åland Islands</option>
@@ -302,7 +308,7 @@
 
 
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <labelv class="label-form" for="provinces">Province:</label>
+                    <labelv class="label-form" for="provinces"><kbd>*</kbd> Province:</label>
                         <select class="form-control" id="provinces">
 	<option value="AB">Alberta</option>
 	<option value="BC">British Columbia</option>
@@ -324,12 +330,12 @@
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <labelv class="label-form animation-form-label" for="city">City:</label>
+                    <labelv class="label-form animation-form-label" for="city"><kbd>*</kbd> City:</label>
                         <input type="text" name="city" id="city" class="Myform" placeholder="City" autocomplete="off" onfocus="ActiveName(2,5)" onfocusout="NonActiveName(2,5)">
                 </div>
 
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <labelv class="label-form animation-form-label" for="postcode">Postal code:</label>
+                    <labelv class="label-form animation-form-label" for="postcode"><kbd>*</kbd> Postal code:</label>
                         <input type="text" name="postalcode" id="postcode" class="Myform" placeholder="Postal code" autocomplete="off" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" onfocus="ActiveName(3,6)" onfocusout="NonActiveName(3,6)">
                 </div>
 
@@ -337,19 +343,19 @@
 
 
             <div class="form-group full-width">
-                <labelv class="label-form animation-form-label" for="street">Street adress:</label>
+                <labelv class="label-form animation-form-label" for="street"><kbd>*</kbd> Street adress:</label>
                     <input type="text" name="street" id="street" class="Myform" placeholder="Street adress" autocomplete="off" onfocus="ActiveName(4,7)" onfocusout="NonActiveName(4,7)">
             </div>
 
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <label class="label-form animation-form-label" for="email">Email:</label>
+                    <label class="label-form animation-form-label" for="email"><kbd>*</kbd>  Email:</label>
                     <input type="email" name="email" id="email" class="Myform" placeholder="Email" autocomplete="off" onfocus="ActiveName(5,8)" onfocusout="NonActiveName(5,8)">
                 </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <label class="label-form animation-form-label" for="phone">Phone:</label>
+                    <label class="label-form animation-form-label" for="phone"><kbd>*</kbd>  Phone:</label>
                     <input type="text" name="phone" id="phone" class="Myform" placeholder="Phone" autocomplete="off" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" onfocus="ActiveName(6,9)" onfocusout="NonActiveName(6,9)">
                 </div>
             </div>
@@ -357,18 +363,18 @@
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <label class="label-form animation-form-label" for="password">Password:</label>
+                    <label class="label-form animation-form-label" for="password"><kbd>*</kbd>  Password:</label>
                     <input type="password" name="password" id="password" class="Myform" placeholder="Password" autocomplete="off" onfocus="ActiveName(7,10)" onfocusout="NonActiveName(7,10)">
                 </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
-                    <label class="label-form animation-form-label" for="cpassword">Confirm password:</label>
+                    <label class="label-form animation-form-label" for="cpassword"><kbd>*</kbd>  Confirm password:</label>
                     <input type="password" name="confirmpas" id="cpassword" class="Myform" placeholder="Confirm password" autocomplete="off" onfocus="ActiveName(8,11)" onfocusout="NonActiveName(8,11)">
                 </div>
             </div>
 
             <div class="form-group  full-width">
-                <labelv class="label-form" for="provinces">Level of Previous Education:</label>
+                <labelv class="label-form" for="provinces"><kbd>*</kbd> Level of Previous Education:</label>
                     <select class="form-control" id="provinces">
 	<option value="UniversityDegree">University degree</option>
     	<option value="College">College</option>
@@ -377,7 +383,7 @@
                     </select>
             </div>
             <div class="form-group  full-width">
-                <labelv class="label-form" for="work">Are you currently working:</label><br>
+                <labelv class="label-form" for="work"><kbd>*</kbd> Are you currently working:</label><br>
                     <label class="radio-inline">
                         <input type="radio" class="radio-work" name="work">Yes
                     </label>
@@ -388,7 +394,7 @@
 
 
             <div class="form-group  full-width">
-                <label class="label-form">Preffered Campus:</label><br>
+                <label class="label-form"><kbd>*</kbd>  Preffered Campus:</label><br>
                 <label class="checkbox-inline checkbox-campus">
                     <input type="checkbox" value="Progress"><span class="text-radio-checkbox">Progress</span>
                 </label>
@@ -401,7 +407,7 @@
             </div>
 
             <div class="form-group  full-width">
-                <label class="label-form animation-form-label" for="interest">Program of interest:</label>
+                <label class="label-form animation-form-label" for="interest"><kbd>*</kbd>  Program of interest:</label>
                 <input type="password" name="interest" id="interest" class="Myform" placeholder="Program of interest" autocomplete="off" onfocus="ActiveName(9,15)" onfocusout="NonActiveName(9,15)">
             </div>
 
@@ -414,7 +420,8 @@
 						<option value="Other">Other website</option>
                     </select>
             </div>
-
+            <br>
+            <h5 class="h5-text"><kbd>*</kbd> - Required Fields</h5>
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <button id="send-button" class="btn btn-default btn-lg btn-block" type="submit" class="btn btn-default" onclick="ValidateFields();">Apply</button>
             </div>
