@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/AnimationForm.js"></script>
+    <script src="scripts/Validation.js"></script>
     <title>Registration Form</title>
 
 </head>
@@ -20,12 +21,12 @@
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="fname">First name:</label>
-                        <input type="text" name="firstname" id="fname" class="Myform" placeholder="First name" autocomplete="off" required onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
+                        <input type="text" name="firstname" id="fname" class="Myform" placeholder="First name" autocomplete="off" onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
                 </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="lname">Last name:</label>
-                        <input type="text" name="lastname" id="lname" class="Myform" placeholder="Last name" autocomplete="off" required onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
+                        <input type="text" name="lastname" id="lname" class="Myform" placeholder="Last name" autocomplete="off" onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
                 </div>
             </div>
 
@@ -324,12 +325,12 @@
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="city">City:</label>
-                        <input type="text" name="city" id="city" class="Myform" placeholder="City" autocomplete="off" required onfocus="ActiveName(2,5)" onfocusout="NonActiveName(2,5)">
+                        <input type="text" name="city" id="city" class="Myform" placeholder="City" autocomplete="off" onfocus="ActiveName(2,5)" onfocusout="NonActiveName(2,5)">
                 </div>
 
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="postcode">Postal code:</label>
-                        <input type="text" name="postalcode" id="postcode" class="Myform" placeholder="Postal code" autocomplete="off" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" onfocus="ActiveName(3,6)" onfocusout="NonActiveName(3,6)">
+                        <input type="text" name="postalcode" id="postcode" class="Myform" placeholder="Postal code" autocomplete="off" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" onfocus="ActiveName(3,6)" onfocusout="NonActiveName(3,6)">
                 </div>
 
             </div>
@@ -337,19 +338,19 @@
 
             <div class="form-group full-width">
                 <labelv class="label-form animation-form-label" for="street">Street adress:</label>
-                    <input type="text" name="street" id="street" class="Myform" placeholder="Street adress" autocomplete="off" required onfocus="ActiveName(4,7)" onfocusout="NonActiveName(4,7)">
+                    <input type="text" name="street" id="street" class="Myform" placeholder="Street adress" autocomplete="off" onfocus="ActiveName(4,7)" onfocusout="NonActiveName(4,7)">
             </div>
 
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="Myform" placeholder="Email" autocomplete="off" required onfocus="ActiveName(5,8)" onfocusout="NonActiveName(5,8)">
+                    <input type="email" name="email" id="email" class="Myform" placeholder="Email" autocomplete="off" onfocus="ActiveName(5,8)" onfocusout="NonActiveName(5,8)">
                 </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="phone">Phone:</label>
-                    <input type="text" name="phone" id="phone" class="Myform" placeholder="Phone" autocomplete="off" required pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" onfocus="ActiveName(6,9)" onfocusout="NonActiveName(6,9)">
+                    <input type="text" name="phone" id="phone" class="Myform" placeholder="Phone" autocomplete="off" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" onfocus="ActiveName(6,9)" onfocusout="NonActiveName(6,9)">
                 </div>
             </div>
 
@@ -357,12 +358,12 @@
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="password">Password:</label>
-                    <input type="password" name="password" id="password" class="Myform" placeholder="Password" autocomplete="off" required onfocus="ActiveName(7,10)" onfocusout="NonActiveName(7,10)">
+                    <input type="password" name="password" id="password" class="Myform" placeholder="Password" autocomplete="off" onfocus="ActiveName(7,10)" onfocusout="NonActiveName(7,10)">
                 </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="cpassword">Confirm password:</label>
-                    <input type="password" name="confirmpas" id="cpassword" class="Myform" placeholder="Confirm password" autocomplete="off" required onfocus="ActiveName(8,11)" onfocusout="NonActiveName(8,11)">
+                    <input type="password" name="confirmpas" id="cpassword" class="Myform" placeholder="Confirm password" autocomplete="off" onfocus="ActiveName(8,11)" onfocusout="NonActiveName(8,11)">
                 </div>
             </div>
 
@@ -401,7 +402,7 @@
 
             <div class="form-group  full-width">
                 <label class="label-form animation-form-label" for="interest">Program of interest:</label>
-                <input type="password" name="interest" id="interest" class="Myform" placeholder="Program of interest" autocomplete="off" required onfocus="ActiveName(9,15)" onfocusout="NonActiveName(9,15)">
+                <input type="password" name="interest" id="interest" class="Myform" placeholder="Program of interest" autocomplete="off" onfocus="ActiveName(9,15)" onfocusout="NonActiveName(9,15)">
             </div>
 
             <div class="form-group  full-width">
@@ -415,7 +416,7 @@
             </div>
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
-                <button id="send-button" class="btn btn-default btn-lg btn-block" type="submit" class="btn btn-default">SEND MESSAGE</button>
+                <button id="send-button" class="btn btn-default btn-lg btn-block" type="submit" class="btn btn-default" onclick="ValidateFields();">Apply</button>
             </div>
 
         </form>
@@ -425,8 +426,8 @@
 
 </body>
 
-<<<<<<< HEAD
-</html>
-=======
+<<<<<<< HEAD </html>
+    =======
+
 </html>
 >>>>>>> origin/master
