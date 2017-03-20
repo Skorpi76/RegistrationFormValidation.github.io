@@ -5,10 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/css/style.css" type="text/css" rel="stylesheet">
+	    <script src="scripts/Validation.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/AnimationForm.js"></script>
-    <script src="scripts/Validation.js"></script>
+			<style>
+			.error
+			{
+				color: red;
+			}
+			 </style>
     <title>Registration Form</title>
 
 </head>
@@ -22,29 +28,32 @@
     <div class="contact-div">
         <h2 class="title-text">Apply online</h2>
         <!--h5 class="h5-text">Ready to take the next step toward achieving your goals? Please foll out the application below and we will contact you about the next steps in your admission process.</h5-->
-        <form class="form-group-md">
+        <form class="form-group-md" id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" action="" method="post">
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="fname"><kbd>*</kbd> First name:</label>
-                        <input type="text" name="firstname" id="fname" class="Myform" placeholder="First name" autocomplete="off" onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
-                </div>
+                        <input type="text" name="firstname" id="firstname" class="Myform" placeholder="First name" autocomplete="off" onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
+                 <div id="firstName-error" class="error"></div>
+				</div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="lname"><kbd>*</kbd> Last name:</label>
-                        <input type="text" name="lastname" id="lname" class="Myform" placeholder="Last name" autocomplete="off" onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
-                </div>
+                        <input type="text" name="lastname" id="lastname" class="Myform" placeholder="Last name" autocomplete="off" onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
+               <div id="lastName-error" class="error"></div>
+			    </div>
             </div>
 
 
             <div class="form-group col-sm-12 col-xs-12 col-sm-12 col-lg-12  full-width">
                 <labelv class="label-form" for="genradio"><kbd>*</kbd> Gender:</label><br>
                     <label class="radio-inline">
-                        <input type="radio" class="radio-gender" name="genradio">Male
+                        <input type="radio" class="radio-gender" name="genradio" id= "Male">Male
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="radio-gender" name="genradio">Female
+                        <input type="radio" class="radio-gender" name="genradio" id = "Female">Female
                     </label>
+					 <div id="gender-error" class="error"></div>
             </div>
 
 
@@ -332,12 +341,14 @@
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="city"><kbd>*</kbd> City:</label>
                         <input type="text" name="city" id="city" class="Myform" placeholder="City" autocomplete="off" onfocus="ActiveName(2,5)" onfocusout="NonActiveName(2,5)">
-                </div>
+               <div id="city-error" class="error"></div>
+			    </div>
 
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="postcode"><kbd>*</kbd> Postal code:</label>
-                        <input type="text" name="postalcode" id="postcode" class="Myform" placeholder="Postal code" autocomplete="off" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" onfocus="ActiveName(3,6)" onfocusout="NonActiveName(3,6)">
-                </div>
+                        <input type="text" name="postalcode" id="postcode" class="Myform" placeholder="Postal code" autocomplete="off" onfocus="ActiveName(3,6)" onfocusout="NonActiveName(3,6)">
+               <div id="postal-error" class="error"></div>
+			   </div>
 
             </div>
 
@@ -352,12 +363,14 @@
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="email"><kbd>*</kbd>  Email:</label>
                     <input type="email" name="email" id="email" class="Myform" placeholder="Email" autocomplete="off" onfocus="ActiveName(5,8)" onfocusout="NonActiveName(5,8)">
-                </div>
+               <div id="email-error" class="error"></div>
+			    </div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="phone"><kbd>*</kbd>  Phone:</label>
-                    <input type="text" name="phone" id="phone" class="Myform" placeholder="Phone" autocomplete="off" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" onfocus="ActiveName(6,9)" onfocusout="NonActiveName(6,9)">
-                </div>
+                    <input type="text" name="phone" id="phone" class="Myform" placeholder="Phone" autocomplete="off"  onfocus="ActiveName(6,9)" onfocusout="NonActiveName(6,9)">
+                <div id="phone-error" class="error"></div>
+				</div>
             </div>
 
 
@@ -370,7 +383,9 @@
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <label class="label-form animation-form-label" for="cpassword"><kbd>*</kbd>  Confirm password:</label>
                     <input type="password" name="confirmpas" id="cpassword" class="Myform" placeholder="Confirm password" autocomplete="off" onfocus="ActiveName(8,11)" onfocusout="NonActiveName(8,11)">
-                </div>
+                <div id="password-error" class="error"></div>
+				</div>
+				
             </div>
 
             <div class="form-group  full-width">
@@ -390,6 +405,7 @@
                     <label class="radio-inline">
                         <input type="radio" class="radio-work" name="work">No
                     </label>
+					 <div id="work-error" class="error"></div>
             </div>
 
 
@@ -423,7 +439,7 @@
             <br>
             <h5 class="h5-text"><kbd>*</kbd> - Required Fields</h5>
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
-                <button id="send-button" class="btn btn-default btn-lg btn-block" type="submit" class="btn btn-default" onclick="ValidateFields();">Apply</button>
+                <button id="send-button" class="btn btn-default btn-lg btn-block" type="submit" class="btn btn-default">Apply</button>
             </div>
 
         </form>
