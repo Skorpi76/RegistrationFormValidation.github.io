@@ -7,6 +7,7 @@
     <link href="styles/css/style.css" type="text/css" rel="stylesheet">
 	    <script src="scripts/Validation.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/AnimationForm.js"></script>
 			<style>
@@ -33,13 +34,13 @@
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="fname"><kbd>*</kbd> First name:</label>
-                        <input type="text" name="firstname" id="firstname" class="Myform" placeholder="First name" autocomplete="off" onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
+                        <input type="text" name="firstname" id="firstname" class="Myform" placeholder="First name" onchange="convertFirstName()" autocomplete="off" onfocus="ActiveName(0,0)" onfocusout="NonActiveName(0,0)">
                  <div id="firstName-error" class="error"></div>
 				</div>
 
                 <div class="form-group col-sm-6 col-xs-6 col-sm-6 col-lg-6">
                     <labelv class="label-form animation-form-label" for="lname"><kbd>*</kbd> Last name:</label>
-                        <input type="text" name="lastname" id="lastname" class="Myform" placeholder="Last name" autocomplete="off" onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
+                        <input type="text" name="lastname" id="lastname" class="Myform" placeholder="Last name" onchange="convertLastName()" autocomplete="off" onfocus="ActiveName(1,1)" onfocusout="NonActiveName(1,1)">
                <div id="lastName-error" class="error"></div>
 			    </div>
             </div>
