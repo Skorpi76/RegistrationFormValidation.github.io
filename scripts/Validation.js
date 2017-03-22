@@ -3,12 +3,18 @@ function validateFormOnSubmit(contact) {
     reason += validateFirstName(contact.firstname);
     reason += validateLastName(contact.lastname);
     reason += validateCity(contact.city);
+    reason += validateStreetAdress(contact.street);
     reason += validateEmail(contact.email);
     reason += validatePhone(contact.phone);
     reason += validateGender(contact.genradio);
     reason += validateRadioWork(contact.work);
     reason += validatePostalCode(contact.postalcode);
     reason += validatePassword();
+    reason += validatePreffered();
+    reason += validateInterest(contact.interest);
+
+
+
 
 
     console.log(reason);
@@ -16,7 +22,83 @@ function validateFormOnSubmit(contact) {
 
         return false;
     } else {
-        return false;
+        alert('asd');
+        var Progress = document.getElementById("Progress");
+        var Morningside = document.getElementById("Morningside");
+        var Ashtonbee = document.getElementById("Ashtonbee");
+
+
+        var firstName = document.getElementById('firstname').value;
+        var lastName = document.getElementById('lastname').value;
+        var gender = '';
+        if (contact.genradio[0].checked == true) {
+            gender = "Male";
+        } else if (contact.genradio[1].checked == true) {
+            gender = 'Female';
+        }
+        var country = document.getElementById('countries').value;
+        var province = document.getElementById('provinces').value;
+        var city = document.getElementById('city').value;
+        var postalCode = document.getElementById('postcode').value;
+        var streetAdress = document.getElementById('street').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var password = document.getElementById('password').value;
+        var preEducation = document.getElementById('Previous').value;
+        var curentWork = '';
+        if (contact.work[0].checked == true) {
+            curentWork = "Employed ";
+        } else if (contact.work[1].checked == true) {
+            curentWork = 'Not employed';
+        }
+        var prefferedCampus = '';
+
+        if (Progress.checked)
+            prefferedCampus += Progress.value;
+        if (Morningside.checked)
+            prefferedCampus += Morningside.value;
+        if (Ashtonbee.checked)
+            prefferedCampus += Ashtonbee.value;
+        var interest = document.getElementById("interest").value;
+        var aboutus = document.getElementById("hear-about").value;
+
+        var jSONString = {
+                FirstName: firstName,
+                LastName: lastName,
+                Gender: gender,
+                Country: country,
+                Province: province,
+                City: city,
+                PostalCode: postalCode,
+                StreetAdress: streetAdress,
+                Email: email,
+                Phone: phone,
+                Password: password,
+                PreviousEducation: preEducation,
+                CurrentlyEmployed: curentWork,
+                PrefferedCampus: prefferedCampus,
+                Interests: interest,
+                HowDidYouHearAboutUs: aboutus
+            }
+            // test if jSONStrings is null 
+        if (localStorage.getItem('jSONStrings') === null) {
+            // init array
+            var jSONStrings = [];
+            //add to array  
+            jSONStrings.push(jSONString);
+            // Set to localStorage
+            localStorage.setItem('jSONStrings', JSON.stringify(jSONStrings));
+
+        } else {
+            // get info from jSONStrings
+            var jSONStrings = JSON.parse(localStorage.getItem('jSONStrings'));
+            // add new info
+            jSONStrings.push(jSONString);
+            // reset back to localStorage
+            localStorage.setItem('jSONStrings', JSON.stringify(jSONStrings));
+
+        }
+        return true;
     }
 }
 
@@ -70,7 +152,7 @@ function validateLastName(name) {
         if (name.value.length == 0) {
 
             document.getElementById('lastName-error').innerHTML = "*The required field has not been filled in";
-            var error = "1-2";
+            var error = "2";
         } else {
 
             document.getElementById('lastName-error').innerHTML = '';
@@ -85,10 +167,24 @@ function validateCity(city) {
     if (city.value.length == 0) {
 
         document.getElementById('city-error').innerHTML = "*The required field has not been filled in";
-        var error = "1-3";
+        var error = "3";
     } else {
 
         document.getElementById('city-error').innerHTML = '';
+    }
+    return error;
+}
+
+function validateStreetAdress(street) {
+    var error = "";
+
+    if (street.value.length == 0) {
+
+        document.getElementById('street-error').innerHTML = "*The required field has not been filled in";
+        var error = "1";
+    } else {
+
+        document.getElementById('street-error').innerHTML = '';
     }
     return error;
 }
@@ -173,9 +269,10 @@ function validatePhone(phone) {
 }
 
 function validateGender(gender) {
+    var error = '';
     if ((contact.genradio[0].checked == false) && (contact.genradio[1].checked == false)) {
         document.getElementById('gender-error').innerHTML = "*Gender required";
-        var error = "2";
+        error = "2";
     } else {
         document.getElementById('gender-error').innerHTML = '';
     }
@@ -183,6 +280,7 @@ function validateGender(gender) {
 }
 
 function validateRadioWork(work) {
+    var error = '';
     if ((contact.work[0].checked == false) && (contact.work[1].checked == false)) {
         document.getElementById('work-error').innerHTML = "*Answer required";
         var error = "2";
@@ -252,6 +350,36 @@ function validatePassword() {
             message.innerHTML = "*Passwords Do Not Match!";
             error = "1";
         }
+    }
+    return error;
+}
+
+function validatePreffered() {
+    var error = '';
+    var Progress = document.getElementById("Progress");
+    var Morningside = document.getElementById("Morningside");
+    var Ashtonbee = document.getElementById("Ashtonbee");
+
+    if ((Progress.checked == false) && (Progress.checked == false) && (Ashtonbee.checked == false)) {
+        document.getElementById('Preffered-error').innerHTML = "*At least one must be choosen";
+        var error = "2";
+    } else {
+        document.getElementById('Preffered-error').innerHTML = '';
+    }
+    return error;
+}
+
+
+function validateInterest(interest) {
+    var error = "";
+
+    if (interest.value.length == 0) {
+
+        document.getElementById('interest-error').innerHTML = "*The required field has not been filled in";
+        var error = "1";
+    } else {
+
+        document.getElementById('interest-error').innerHTML = '';
     }
     return error;
 }

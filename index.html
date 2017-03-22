@@ -28,7 +28,7 @@
     <div class="contact-div">
         <h2 class="title-text">Apply online</h2>
         <!--h5 class="h5-text">Ready to take the next step toward achieving your goals? Please foll out the application below and we will contact you about the next steps in your admission process.</h5-->
-        <form class="form-group-md" id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" action="" method="post">
+        <form class="form-group-md" id="contact" name="contact" onsubmit="return validateFormOnSubmit(this)" action="result.html" method="post">
 
             <div class="col-sm-12 col-xs-12 col-sm-12 col-lg-12">
                 <div class="form-group  col-sm-6 col-xs-6 col-sm-6 col-lg-6">
@@ -356,6 +356,7 @@
             <div class="form-group full-width">
                 <labelv class="label-form animation-form-label" for="street"><kbd>*</kbd> Street adress:</label>
                     <input type="text" name="street" id="street" class="Myform" placeholder="Street adress" autocomplete="off" onfocus="ActiveName(4,7)" onfocusout="NonActiveName(4,7)">
+                    <div id="street-error" class="error"></div>
             </div>
 
 
@@ -390,7 +391,7 @@
 
             <div class="form-group  full-width">
                 <labelv class="label-form" for="provinces"><kbd>*</kbd> Level of Previous Education:</label>
-                    <select class="form-control" id="provinces">
+                    <select class="form-control" id="Previous"> 
 	<option value="UniversityDegree">University degree</option>
     	<option value="College">College</option>
 	<option value="HighSchool">High school</option>
@@ -412,19 +413,21 @@
             <div class="form-group  full-width">
                 <label class="label-form"><kbd>*</kbd>  Preffered Campus:</label><br>
                 <label class="checkbox-inline checkbox-campus">
-                    <input type="checkbox" value="Progress"><span class="text-radio-checkbox">Progress</span>
+                    <input type="checkbox" value="Progress " id="Progress"><span class="text-radio-checkbox">Progress</span>
                 </label>
                 <label class="checkbox-inline checkbox-campus">
-                    <input type="checkbox"value="Morningside "><span class="text-radio-checkbox">Morningside </span>
+                    <input type="checkbox"value="Morningside " id="Morningside"><span class="text-radio-checkbox">Morningside </span>
                 </label>
                 <label class="checkbox-inline checkbox-campus">
-                    <input type="checkbox" value="Ashtonbee "><span class="text-radio-checkbox">Ashtonbee</span>
+                    <input type="checkbox" value="Ashtonbee " id="Ashtonbee"><span class="text-radio-checkbox">Ashtonbee</span>
                 </label>
+                <div id="Preffered-error" class="error"></div>
             </div>
 
             <div class="form-group  full-width">
                 <label class="label-form animation-form-label" for="interest"><kbd>*</kbd>  Program of interest:</label>
-                <input type="password" name="interest" id="interest" class="Myform" placeholder="Program of interest" autocomplete="off" onfocus="ActiveName(9,15)" onfocusout="NonActiveName(9,15)">
+                <input type="input" name="interest" id="interest" class="Myform" placeholder="Program of interest" autocomplete="off" onfocus="ActiveName(9,15)" onfocusout="NonActiveName(9,15)">
+                <div id="interest-error" class="error"></div>
             </div>
 
             <div class="form-group  full-width">
