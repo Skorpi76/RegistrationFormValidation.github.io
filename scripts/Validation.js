@@ -102,6 +102,9 @@ function validateFormOnSubmit(contact) {
     }
 }
 
+
+
+
 function convertFirstName() // is called on Input First Name onchange 
 {
     var firstName = document.getElementById("firstname");
@@ -248,22 +251,21 @@ function validateEmail(email) {
 function validatePhone(phone) {
     var error = "";
     var stripped = phone.value.replace(/[\(\)\.\-\ ]/g, '');
-
     if (phone.value == "") {
         document.getElementById('phone-error').innerHTML = "*Please enter a phone number";
-
         var error = '6';
-    } else if (isNaN(parseInt(stripped))) {
-        var error = "5";
-        document.getElementById('phone-error').innerHTML = "*The phone number contains illegal characters.";
-
-    } else if (stripped.length < 10) {
-        var error = "6";
-        document.getElementById('phone-error').innerHTML = "*The phone number is too short.";
-
+    } else if (phone.value.length != 10) {
+        document.getElementById('phone-error').innerHTML = "*Phone number can only be 10 characters";
+        var error = '6';
     } else {
+        if (isNaN(parseInt(stripped))) {
+            var error = "5";
+            document.getElementById('phone-error').innerHTML = "*The phone number contains illegal characters.";
 
-        document.getElementById('phone-error').innerHTML = '';
+        } else {
+
+            document.getElementById('phone-error').innerHTML = '';
+        }
     }
     return error;
 }

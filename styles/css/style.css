@@ -4,7 +4,6 @@
 body {
   font-family: "Open Sans", "Lato", sans-serif;
   background-color: white;
-  box-shadow: 0 15px 15px -15px #333, 0 -15px 15px -15px #333;
 }
 
 /* line 12, ../compass/sass/style.sass */
@@ -27,7 +26,7 @@ header {
   margin-right: auto;
   margin-top: 70px;
   padding-bottom: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 /* line 30, ../compass/sass/style.sass */
@@ -37,7 +36,7 @@ header {
   color: #333;
 }
 
-/* line 38, ../compass/sass/style.sass */
+/* line 36, ../compass/sass/style.sass */
 .Myform {
   width: 100%;
   border: none !important;
@@ -48,33 +47,33 @@ header {
   margin-top: 5px;
 }
 
-/* line 47, ../compass/sass/style.sass */
+/* line 45, ../compass/sass/style.sass */
 .label-form {
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
   color: #52596b;
 }
 
-/* line 52, ../compass/sass/style.sass */
+/* line 50, ../compass/sass/style.sass */
 input, textarea {
   color: #rgb 82, 89, 107 !important;
   background-color: white;
 }
 
-/* line 56, ../compass/sass/style.sass */
+/* line 54, ../compass/sass/style.sass */
 textarea:focus, input:focus {
   outline: none;
   color: #rgb 82, 89, 107 !important;
 }
 
-/* line 60, ../compass/sass/style.sass */
+/* line 58, ../compass/sass/style.sass */
 *::-webkit-input-placeholder {
   color: #rgb 82, 89, 107;
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 300;
 }
 
-/* line 65, ../compass/sass/style.sass */
+/* line 63, ../compass/sass/style.sass */
 *:-moz-placeholder {
   color: #rgb 82, 89, 107;
   opacity: 1;
@@ -82,7 +81,7 @@ textarea:focus, input:focus {
   font-weight: 300;
 }
 
-/* line 71, ../compass/sass/style.sass */
+/* line 69, ../compass/sass/style.sass */
 *::-moz-placeholder {
   color: #rgb 82, 89, 107;
   opacity: 1;
@@ -90,54 +89,54 @@ textarea:focus, input:focus {
   font-weight: 300;
 }
 
-/* line 77, ../compass/sass/style.sass */
+/* line 75, ../compass/sass/style.sass */
 *:-ms-input-placeholder {
   color: #rgb 82, 89, 107;
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 300;
 }
 
-/* line 82, ../compass/sass/style.sass */
+/* line 80, ../compass/sass/style.sass */
 .radio-gender, .radio-work {
   margin-left: -20px !important;
 }
 
-/* line 86, ../compass/sass/style.sass */
+/* line 84, ../compass/sass/style.sass */
 .radio-inline {
   width: 45% !important;
   margin-top: 10px !important;
 }
 
-/* line 90, ../compass/sass/style.sass */
+/* line 88, ../compass/sass/style.sass */
 #countries, #provinces {
   margin-top: 10px !important;
 }
 
-/* line 93, ../compass/sass/style.sass */
+/* line 91, ../compass/sass/style.sass */
 .phone-text {
   margin-top: 5px;
   margin-bottom: 0;
 }
 
-/* line 97, ../compass/sass/style.sass */
+/* line 95, ../compass/sass/style.sass */
 .checkbox-campus {
   width: 32%;
 }
 
-/* line 100, ../compass/sass/style.sass */
+/* line 98, ../compass/sass/style.sass */
 .text-radio-checkbox {
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
   color: #52596b;
 }
 
-/* line 105, ../compass/sass/style.sass */
+/* line 103, ../compass/sass/style.sass */
 .full-width {
   padding-left: 30px !important;
   padding-right: 30px !important;
 }
 
-/* line 109, ../compass/sass/style.sass */
+/* line 107, ../compass/sass/style.sass */
 #send-button {
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
@@ -148,21 +147,53 @@ textarea:focus, input:focus {
   margin-right: auto;
   margin-top: 30px;
 }
-/* line 118, ../compass/sass/style.sass */
+/* line 116, ../compass/sass/style.sass */
 #send-button:hover {
   color: #590096;
   border: 2px solid #590096 !important;
   background-color: white !important;
 }
 
-/* line 123, ../compass/sass/style.sass */
+/* line 121, ../compass/sass/style.sass */
 .animation-form-label {
   color: white;
 }
 
-/* line 126, ../compass/sass/style.sass */
+/* line 124, ../compass/sass/style.sass */
 .h5-text {
   margin: 15px 30px;
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
+}
+
+/* line 129, ../compass/sass/style.sass */
+.footer {
+  color: #fff;
+  background-color: #28122E;
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 400;
+}
+
+/* line 135, ../compass/sass/style.sass */
+.error {
+  color: red;
+}
+
+/* line 138, ../compass/sass/style.sass */
+.result-div {
+  min-height: 85vh;
+}
+
+/* line 141, ../compass/sass/style.sass */
+.result-text-h3 {
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 300;
+  padding: 0px 20px;
+}
+
+/* line 146, ../compass/sass/style.sass */
+.goback-link-h4 {
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-weight: 300;
+  padding: 0px 20px;
 }
