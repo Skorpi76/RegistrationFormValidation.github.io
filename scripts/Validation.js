@@ -105,6 +105,17 @@ function validateFormOnSubmit(contact) {
     }
 }
 
+// Show customers name on result page 
+function fetchJSON() { // this function called on load reasult page 
+    // get info from localStorage
+    var jSONStrings = JSON.parse(localStorage.getItem('jSONStrings'));
+    console.log(jSONStrings.length - 1);
+    // get output id
+    var jSONStringsResult = document.getElementById('result');
+    // place last added object's name and last name 
+    jSONStringsResult.innerHTML = jSONStrings[jSONStrings.length - 1].FirstName + " " + jSONStrings[jSONStrings.length - 1].LastName;
+
+}
 // Converts first letter to UpperCase and all the rest to LowerCase is called on Input First Name onchange
 function convertFirstName() {
     var firstName = document.getElementById("firstname");
