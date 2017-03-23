@@ -20,9 +20,9 @@ function validateFormOnSubmit(contact) {
     console.log(reason);
     // if any of validation fields return an error, submit will not happen 
     if (reason.length > 0) {
-            alert('Some fields are missing or do not meet requirements ');
+        alert('Some fields are missing or do not meet requirements ');
         return false;
-    // If all requirements are met, it will save all info to localStorage and transfer user to result page 
+        // If all requirements are met, it will save all info to localStorage and transfer user to result page 
     } else {
         // init values that will be added to localStorage 
         var Progress = document.getElementById("Progress");
@@ -63,8 +63,8 @@ function validateFormOnSubmit(contact) {
             prefferedCampus += Ashtonbee.value;
         var interest = document.getElementById("interest").value;
         var aboutus = document.getElementById("hear-about").value;
-    
-         // Creating a variable that will be send to local Storage
+
+        // Creating a variable that will be send to local Storage
         var jSONString = {
                 FirstName: firstName,
                 LastName: lastName,
@@ -109,11 +109,9 @@ function validateFormOnSubmit(contact) {
 
 
 
-function convertFirstName() // is called on Input First Name onchange 
 
 // Converts first letter to UpperCase and all the rest to LowerCase is called on Input First Name onchange
-function convertFirstName()  
-{
+function convertFirstName() {
     var firstName = document.getElementById("firstname");
 
     if (firstName != "") {
@@ -122,8 +120,7 @@ function convertFirstName()
     }
 }
 // Converts Last name's first letter to UpperCase and all the rest to LowerCase is called on Input Last Name onchange
-function convertLastName() 
-{
+function convertLastName() {
     var lastname = document.getElementById("lastname");
 
     if (lastname != "") {
@@ -158,19 +155,19 @@ function validateFirstName(name) {
 }
 
 function validateLastName(name) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
-        // Test lenth of last name value, if it has more then 15 characchters will return an error
+    // Test lenth of last name value, if it has more then 15 characchters will return an error
     if (name.value.length > 15) {
         var error = "1";
         document.getElementById('lastName-error').innerHTML = "*Last Name is too long";
     } else {
-         // if last name value is less that 15 but == 0 than we return an error 
+        // if last name value is less that 15 but == 0 than we return an error 
         if (name.value.length == 0) {
 
             document.getElementById('lastName-error').innerHTML = "*The required field has not been filled in";
             var error = "2";
-                    // else we have no errors and return an empty error.  
+            // else we have no errors and return an empty error.  
         } else {
 
             document.getElementById('lastName-error').innerHTML = '';
@@ -180,7 +177,7 @@ function validateLastName(name) {
 }
 
 function validateCity(city) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
 
     if (city.value.length == 0) {
@@ -195,7 +192,7 @@ function validateCity(city) {
 }
 
 function validateStreetAdress(street) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
 
     if (street.value.length == 0) {
@@ -210,7 +207,7 @@ function validateStreetAdress(street) {
 }
 
 function validatePostalCode(postal) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
     var tpostal = trim(postal.value);
     var postalFilter = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
@@ -241,7 +238,7 @@ function trim(s) {
 }
 
 function validateEmail(email) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
     var temail = trim(email.value); // value of field with whitespace trimmed off
     var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
@@ -268,7 +265,7 @@ function validateEmail(email) {
 
 // validate phone for required and format
 function validatePhone(phone) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
     var stripped = phone.value.replace(/[\(\)\.\-\ ]/g, '');
     if (phone.value == "") {
@@ -291,7 +288,7 @@ function validatePhone(phone) {
 }
 
 function validateGender(gender) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = '';
     if ((contact.genradio[0].checked == false) && (contact.genradio[1].checked == false)) {
         document.getElementById('gender-error').innerHTML = "*Gender required";
@@ -303,7 +300,7 @@ function validateGender(gender) {
 }
 
 function validateRadioWork(work) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = '';
     if ((contact.work[0].checked == false) && (contact.work[1].checked == false)) {
         document.getElementById('work-error').innerHTML = "*Answer required";
@@ -315,7 +312,7 @@ function validateRadioWork(work) {
 }
 
 function validatePassword() {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
     //Store the password field objects into variables ...
     var pass1 = document.getElementById('password');
@@ -380,7 +377,7 @@ function validatePassword() {
 }
 
 function validatePreffered() {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = '';
     var Progress = document.getElementById("Progress");
     var Morningside = document.getElementById("Morningside");
@@ -397,7 +394,7 @@ function validatePreffered() {
 
 
 function validateInterest(interest) {
-     // init and error that will be returned 
+    // init and error that will be returned 
     var error = "";
 
     if (interest.value.length == 0) {
