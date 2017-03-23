@@ -104,13 +104,13 @@ function validateFormOnSubmit(contact) {
         return true;
     }
 }
-<<<<<<< HEAD
+
 
 
 
 
 function convertFirstName() // is called on Input First Name onchange 
-=======
+
 // Converts first letter to UpperCase and all the rest to LowerCase is called on Input First Name onchange
 function convertFirstName()  
 >>>>>>> origin/master
